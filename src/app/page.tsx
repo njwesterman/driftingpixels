@@ -7,7 +7,7 @@ const PRODUCTS = [
   {
     name: "Sekkei Flow",
     url: "sekkeiflow.com",
-    description: "Design systems and workflow tools for teams who move fast and ship clean.",
+    description: "The beauty of deliberate design with the discipline of systematic thinking — so your life flows forward instead of piling up.",
     color: "#00f0ff",
   },
   {
@@ -112,10 +112,9 @@ export default function Home() {
               >
                 NAITEC
               </a>
-              {" "}&mdash; a digital agency that builds software for federal government and
-              enterprise by day. But it&apos;s grown into something bigger: a mix of
-              developers, creatives, and people from all walks of life who just want
-              to build things for fun, learn new tech, and hang out.
+              , a digital agency by day. Over time it&apos;s naturally pulled in
+              developers, creatives, and people from all walks of life who just
+              want to build things for fun, learn new tech, and hang out.
             </p>
             <p className="text-foreground/80 text-sm sm:text-base leading-relaxed font-mono mt-4">
               You don&apos;t need to be a developer. Maybe you&apos;re a designer,
