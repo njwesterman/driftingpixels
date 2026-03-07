@@ -120,7 +120,7 @@ export default function Home() {
               idea and the energy to make it real. If you&apos;ve got that itch
               to create something &mdash; or you just miss what it feels like to
               build without the standups, the timesheets, the meetings about
-              meetings, and actually just collaborate and dream freely again &mdash;
+              meetings, and just be creative without restrictions again &mdash;
               you&apos;re one of us. Come hang out and build something weird
               together &mdash; or just play games when the execution becomes
               less fun than the theory.
