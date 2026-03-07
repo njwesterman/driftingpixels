@@ -60,9 +60,6 @@ export default function Home() {
 
           {/* Scroll indicator */}
           <div className="absolute bottom-12 flex flex-col items-center gap-2 animate-[fade-in-up_1s_ease_1.5s_both]">
-            <span className="text-text-dim text-xs font-mono tracking-widest uppercase">
-              Scroll
-            </span>
             <div className="w-px h-8 bg-gradient-to-b from-neon-cyan/60 to-transparent animate-pulse" />
           </div>
         </section>
