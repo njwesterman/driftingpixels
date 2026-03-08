@@ -18,6 +18,78 @@ const PRODUCTS = [
   },
 ];
 
+const IN_PROGRESS = [
+  {
+    name: "BabyFink",
+    url: "babyfink.com",
+    description: "A tiny typing game built by a sleep-deprived new dad trying to teach a toddler the keyboard. Eight years later, it's finally getting an upgrade.",
+    color: "#8844ff",
+  },
+];
+
+const UNCLAIMED_QUESTS = [
+  {
+    name: "Pawdle",
+    url: "pawdle.com.au",
+    description: "A community portal connecting dog breeders with people looking for their perfect pup.",
+  },
+  {
+    name: "SafeNet Global",
+    url: "safenetglobal.com",
+    description: "AI-powered, jurisdiction-aware content safety analysis across text and images. Multi-country legal compliance.",
+  },
+  {
+    name: "Swift File Share",
+    url: "swiftfileshare.com",
+    description: "Fast, no-signup file sharing. Drop a file, get a link, done.",
+  },
+  {
+    name: "Debugging Hub",
+    url: "debugginghub.com",
+    description: "Developer debugging toolkit. HTTPS errors, performance monitoring, DOM changes, state tracking, and error analysis.",
+  },
+  {
+    name: "Gravy Gob",
+    url: "gravygob.com",
+    description: "Real home cooking from real people. No food blogs, no influencer plating — just honest meals and the stories behind them.",
+  },
+  {
+    name: "Astro Dinos",
+    url: "astrodinos.com",
+    description: "An educational kids game. Dinosaurs in space — learning disguised as an adventure.",
+  },
+  {
+    name: "Chore Dice",
+    url: "choredice.com",
+    description: "Roll the dice, pick your chore. A fun way to get the family sharing the housework.",
+  },
+  {
+    name: "Antler Plaid",
+    url: "antlerplaid.com",
+    description: "Outdoors-inspired clothing and apparel. Manufacturing meets rugged style.",
+  },
+  {
+    name: "Generosity Globe",
+    url: "generosityglobe.com",
+    description: "Connecting people with charities and causes around the world. Find where to give, see the impact.",
+  },
+  {
+    name: "Ten Till Then",
+    url: "tentillthen.com",
+    description: "Digital time capsules. Write messages to your future self, seal them with a date, and unlock them when the time comes.",
+  },
+  {
+    name: "Itzy Mitzy",
+    url: "itzymitzy.com",
+    description: "Playful, quirky fashion brand. Bold prints and colour for people who don't do boring.",
+  },
+  {
+    name: "Milo Muddle",
+    url: "milomuddle.com",
+    description: "A kids book series following Milo, a lovable character who gets into wonderfully muddled adventures.",
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -93,6 +165,48 @@ export default function Home() {
           </div>
         </section>
 
+        {/* In Progress Section */}
+        <section className="px-6 py-16 max-w-4xl mx-auto">
+          <h2 className="font-pixel text-xs sm:text-sm tracking-widest text-[#8844ff] mb-12 text-center">
+            // IN PROGRESS
+          </h2>
+          <div className="grid gap-6 md:grid-cols-2">
+            {IN_PROGRESS.map((project, i) => (
+              <ProductCard key={project.name} {...project} index={i} />
+            ))}
+          </div>
+        </section>
+
+        {/* Unclaimed Quests Section */}
+        <section className="px-6 py-16 max-w-4xl mx-auto">
+          <h2 className="font-pixel text-xs sm:text-sm tracking-widest text-neon-yellow mb-4 text-center">
+            // UNCLAIMED QUESTS
+          </h2>
+          <p className="text-text-dim text-xs font-mono text-center mb-12 max-w-lg mx-auto">
+            Domains we&apos;ve grabbed and ideas we&apos;ve thrown around. Some might turn into real projects. Others are just experiments while we learn something new. It&apos;s less about the destination and more about the quest.
+          </p>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {UNCLAIMED_QUESTS.map((quest, i) => (
+              <div
+                key={quest.name}
+                className="neon-border p-4 bg-bg-panel/40 backdrop-blur-sm opacity-0 animate-[fade-in-up_0.5s_ease_both]"
+                style={{
+                  animationDelay: `${i * 80}ms`,
+                  borderColor: "rgba(240, 255, 0, 0.15)",
+                }}
+              >
+                <h3 className="font-pixel text-[10px] tracking-wider text-neon-yellow mb-1">
+                  {quest.name}
+                </h3>
+                <p className="text-text-dim text-[10px] font-mono mb-2">{quest.url}</p>
+                <p className="text-foreground/60 text-xs leading-relaxed font-mono">
+                  {quest.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* Connect Section */}
         <section className="px-6 py-32 max-w-4xl mx-auto">
           <div className="neon-border p-8 sm:p-12 bg-bg-panel/60 backdrop-blur-sm">
@@ -109,21 +223,24 @@ export default function Home() {
               >
                 NAITEC
               </a>
-              , a digital agency by day. Over time it&apos;s naturally pulled in
-              developers, creatives, and people from all walks of life who just
-              want to build things for fun, learn new tech, and hang out.
+              , a digital agency by day. Over time it naturally pulled in
+              developers, creatives, and curious builders who enjoy learning new
+              tech, experimenting with ideas, and building things for the fun of
+              it.
             </p>
             <p className="text-foreground/80 text-sm sm:text-base leading-relaxed font-mono mt-4">
               You don&apos;t need to be a developer. Maybe you&apos;re a designer,
-              a tester who loves breaking things, a product person with a vision,
-              someone in marketing with a side hustle, or just someone with an
-              idea and the energy to make it real. If you&apos;ve got that itch
-              to create something &mdash; or you just miss what it feels like to
-              build without the standups, the timesheets, the meetings about
-              meetings, and just be creative without restrictions again &mdash;
-              you&apos;re one of us. Come hang out and build something weird
-              together &mdash; or just play games when the execution becomes
-              less fun than the theory.
+              a tester who loves breaking things, a product thinker with a vision,
+              someone in marketing with a side project, or just someone with an
+              idea and the energy to make it real.
+            </p>
+            <p className="text-foreground/80 text-sm sm:text-base leading-relaxed font-mono mt-4">
+              If you&apos;ve got the itch to create something, explore an idea, or
+              collaborate with people who enjoy making things, you&apos;re one of us.
+            </p>
+            <p className="text-foreground/80 text-sm sm:text-base leading-relaxed font-mono mt-4">
+              Come hang out, build something weird together, or just play games
+              when the execution turns out harder than the theory.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <a
