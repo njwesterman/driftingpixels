@@ -88,6 +88,11 @@ const UNCLAIMED_QUESTS = [
     url: "milomuddle.com",
     description: "A kids book series following Milo, a lovable character who gets into wonderfully muddled adventures.",
   },
+  {
+    name: "Me and My Toys",
+    url: "meandmytoys.com",
+    description: "A virtual museum of retro toys. Walk through 3D exhibits, explore vintage collections, and relive the toys that defined your childhood.",
+  },
 ];
 
 export default function Home() {
